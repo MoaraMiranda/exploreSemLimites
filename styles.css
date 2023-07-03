@@ -17,6 +17,7 @@
   display: flex;
   flex: 1;
 }
+
 /* Header */
 header {
   background-color: var(--bg-heading);
@@ -49,6 +50,7 @@ h1 {
   width: 45rem;
   height: 46rem;
 }
+
 /* Main - cards*/
 main {
   display: flex;
@@ -99,6 +101,7 @@ main section div.card div p {
   font-family: var(--ff-general);
   font-weight: 600;
 }
+
 /* Main - Contact*/
 main section.contact {
   display: flex;
@@ -112,6 +115,55 @@ main section div.contactInput {
   flex-direction: column;
   gap: 1.5rem;
   flex: 1;
+}
+main section.contact h2 {
+  font-family: var(--ff-general);
+  color: var(--fc-heading);
+  font-size: 2.6rem;
+  font-weight: 900;
+}
+main section input{
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+}
+main section textarea{
+  padding:  0.75rem 1rem 0.75rem 1rem;
+}
+main section input,
+textarea {
+  border: 1.5px solid var(--fc-text);
+  border-radius: 1rem;
+  font-family: var(--ff-general);
+  color: var(--fc-text);
+  font-size: 1rem;
+  font-weight: 600;
+}
+main section button {
+  background: var(--bg-main-footer);
+  border-radius: 1rem;
+  color: #fff;
+  font-family: var(--ff-general);
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-transform: capitalize;
+  padding: 1rem;
+  width: 10rem;
+  border: none;
+}
+.iconPerson {
+  background-image: url(./images/person.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-y: 50%;
+  background-position-x: 1.5%;
+}
+.iconEmail{
+  background-image: url(./images/at.svg);
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position-y: 50%;
+  background-position-x: 1.5%;
 }
 .stars {
   min-height: 100%;

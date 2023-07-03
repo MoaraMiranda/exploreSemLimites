@@ -12,12 +12,16 @@
   font-size: 62.5%;
 }
 
+.container {
+  max-width: 90rem;
+  display: flex;
+  flex: 1;
+}
 /* Header */
 header {
   background-color: var(--bg-heading);
 }
 header section {
-  /* max-width: 100rem; */
   display: flex;
   margin: auto;
 }
@@ -25,12 +29,10 @@ header section {
   margin: 19.5rem auto 8.5rem;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-family: var(--ff-general);
   font-weight: 900;
   color: var(--fc-heading);
-  text-align: center;
-  align-items: center;
 }
 .genericText {
   font-family: var(--ff-general);
@@ -47,16 +49,22 @@ h1 {
   width: 45rem;
   height: 46rem;
 }
-/* Main */
+/* Main - cards*/
 main {
   display: flex;
   flex-direction: column;
   margin: auto;
 }
+
 main section.cards {
   background: var(--bg-main-footer);
   display: flex;
+  justify-content: center;
   padding: 4rem 7rem;
+}
+
+main section div.cardsWrapper {
+  display: flex;
   gap: 3.75rem;
   justify-content: center;
 }
@@ -72,7 +80,7 @@ main section div.card {
   width: 30rem;
   height: 30rem;
 }
-main section img {
+main section div.card img {
   width: 6rem;
   height: 6rem;
 }
@@ -90,4 +98,35 @@ main section div.card div p {
   font-size: 1.3rem;
   font-family: var(--ff-general);
   font-weight: 600;
+}
+/* Main - Contact*/
+main section.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+}
+main section div.contactInput {
+  display: flex;
+  max-width: 37rem;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+.stars {
+  min-height: 100%;
+  background-image: url(./images/bgStars.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: var(--bg-heading);
+}
+/* Footer */
+footer {
+  background: var(--bg-main-footer);
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--ff-general);
+  font-weight: 600;
+  padding: 1rem;
 }

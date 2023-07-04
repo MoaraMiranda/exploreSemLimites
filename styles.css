@@ -12,22 +12,18 @@
   font-size: 62.5%;
 }
 
-.container {
-  max-width: 90rem;
-  display: flex;
-  flex: 1;
-}
-
 /* Header */
 header {
   background-color: var(--bg-heading);
+  padding-bottom: 6rem;
 }
-header section {
+header section.containerHeader {
   display: flex;
   margin: auto;
+  justify-content: center;
 }
 .head {
-  margin: 19.5rem auto 8.5rem;
+  margin-top: 19.5rem;
 }
 h1 {
   font-size: 3.2rem;
@@ -46,23 +42,32 @@ h1 {
   height: 6.5rem;
   margin-top: 11rem;
 }
-.astro {
+header section div.astro {
+  background-image: url(/images/astronautDesktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
   width: 45rem;
-  height: 46rem;
+  height: 45rem;
 }
+/********************************
+ Main 
+********************************/
 
-/* Main - cards*/
 main {
   display: flex;
   flex-direction: column;
   margin: auto;
 }
 
+/********************************
+ Main - cards
+********************************/
+
 main section.cards {
-  background: var(--bg-main-footer);
   display: flex;
   justify-content: center;
-  padding: 4rem 7rem;
+  padding: 4rem 0;
+  background: var(--bg-main-footer);
 }
 
 main section div.cardsWrapper {
@@ -79,8 +84,8 @@ main section div.card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 30rem;
-  height: 30rem;
+  max-width: 27rem;
+  height: 31rem;
 }
 main section div.card img {
   width: 6rem;
@@ -102,7 +107,15 @@ main section div.card div p {
   font-weight: 600;
 }
 
-/* Main - Contact*/
+/********************************
+Main - Contact
+********************************/
+
+.containerContact {
+  max-width: 90rem;
+  display: flex;
+  flex: 1;
+}
 main section.contact {
   display: flex;
   justify-content: center;
@@ -122,11 +135,11 @@ main section.contact h2 {
   font-size: 2.6rem;
   font-weight: 900;
 }
-main section input{
+main section input {
   padding: 0.75rem 1rem 0.75rem 3rem;
 }
-main section textarea{
-  padding:  0.75rem 1rem 0.75rem 1rem;
+main section textarea {
+  padding: 0.75rem 1rem 0.75rem 1rem;
 }
 main section input,
 textarea {
@@ -158,7 +171,7 @@ main section button {
   background-position-y: 50%;
   background-position-x: 1.5%;
 }
-.iconEmail{
+.iconEmail {
   background-image: url(./images/at.svg);
   background-repeat: no-repeat;
   background-size: 18px;
@@ -166,6 +179,7 @@ main section button {
   background-position-x: 1.5%;
 }
 .stars {
+  min-width: 100%;
   min-height: 100%;
   background-image: url(./images/bgStars.png);
   background-repeat: no-repeat;
@@ -181,4 +195,103 @@ footer {
   font-family: var(--ff-general);
   font-weight: 600;
   padding: 1rem;
+}
+
+@media (max-width: 960px) {
+  .containerHeader,
+  .cardsWrapper,
+  .containerContact {
+    padding: 0 3rem 0 3rem;
+  }
+  header {
+    padding-bottom: 3rem;
+  }
+  .arrowImg {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .cardsWrapper {
+    padding: 0;
+  }
+  main section.cards {
+    padding: 10rem;
+  }
+  header section div.astro {
+    width: 105rem;
+    height: 45rem;
+  }
+  .head {
+    margin-top: 11.5rem;
+  }
+  header {
+    padding-bottom: 0;
+  }
+  main section.cards {
+    padding: 3rem;
+  }
+  main section div.card {
+    gap: 1.5rem;
+    max-width: 30rem;
+    height: 40rem;
+  }
+  main section div.cardsWrapper {
+    gap: 2.75rem;
+  }
+}
+@media (max-width: 400px) {
+  header section div.astro {
+    background-image: url(/images/astronaut.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 34rem;
+    height: 34rem;
+  }
+  header section.containerHeader {
+    display: flex;
+    margin: auto;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .containerHeader, .cardsWrapper, .containerContact {
+    padding: 0;
+}
+.head {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+h1 {
+    font-size: 2.5rem;
+}
+.genericText {
+    font-size: 1.8rem;
+}
+.arrowImg {
+    margin: 3rem;
+    text-align: center;
+  }
+  main section div.cardsWrapper {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    flex-direction: column;
+}
+main section div.card {
+    gap: 2rem;
+    max-width: 100%;
+    height: 100%;
+}
+main section h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.stars{
+  display: none;
+}
+main section.contact {
+    height: 100%;
+    padding: 3rem;
+}
+
 }

@@ -186,7 +186,12 @@ main section button {
   background-position: right;
   background-color: var(--bg-heading);
 }
-/* Footer */
+
+/********************************
+Footer
+********************************/
+
+
 footer {
   background: var(--bg-main-footer);
   color: #fff;
@@ -196,6 +201,16 @@ footer {
   font-weight: 600;
   padding: 1rem;
 }
+
+/********************************
+Transitions
+********************************/
+
+
+
+/********************************
+Media Query
+********************************/
 
 @media (max-width: 960px) {
   .containerHeader,
@@ -287,7 +302,7 @@ main section h4 {
     margin-bottom: 1rem;
 }
 .stars{
-  display: none;
+  background-image: none;
 }
 main section.contact {
     height: 100%;
